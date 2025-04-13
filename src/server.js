@@ -18,10 +18,12 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
+
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    credentials: true,
+    origin: "https://chatty-eta-seven.vercel.app", // Replace with your frontend URL
+    credentials: true, // Allows cookies
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Allowed methods
   })
 );
 
