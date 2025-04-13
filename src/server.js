@@ -21,7 +21,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://chatty-eta-seven.vercel.app", // Replace with your frontend URL
+    origin: "*", // Replace with your frontend URL
     credentials: true, // Allows cookies
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Allowed methods
   })
