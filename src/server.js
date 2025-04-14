@@ -13,14 +13,14 @@ import { app, server } from "./lib/socket.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5002;
 // const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin:"https://chatty-eta-seven.vercel.app",  
+  origin:"https://chatty.vercel.app",  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  
   allowedHeaders: ['Content-Type', 'Authorization'],  
   credentials:true                                                 
