@@ -19,13 +19,12 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(
-  cors({
-    origin: "https://chatty-eta-seven.vercel.app", // Replace with your frontend URL
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Allowed methods
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin:"https://chatty-eta-seven.vercel.app",  
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
+  allowedHeaders: ['Content-Type', 'Authorization'],  
+  credentials:true                                                 
+}));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
