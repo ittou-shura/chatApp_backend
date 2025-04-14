@@ -9,7 +9,6 @@ const io = new Server(server, {
   cors: {
     origin:"https://chatty-beta-snowy.vercel.app",  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  
-  allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials:true,
   },
 });

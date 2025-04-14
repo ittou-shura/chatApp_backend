@@ -17,12 +17,12 @@ const PORT = process.env.PORT || 5002;
 // const __dirname = path.resolve();
 //app.use(cors());
 
-// app.use(cors({
-//   origin:"https://chatty-beta-snowy.vercel.app",  
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],  
-//   allowedHeaders: ['Content-Type', 'Authorization'],  
-//   credentials:true,
-// }));
+app.use(cors({
+  origin:"https://chatty-beta-snowy.vercel.app",  
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
+  allowedHeaders: ['Content-Type', 'Authorization'],  
+  credentials:true,
+}));
 
 app.use(express.json());
 app.use(cookieParser());
