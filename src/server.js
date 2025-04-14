@@ -16,8 +16,6 @@ dotenv.config();
 const PORT = process.env.PORT || 5002;
 // const __dirname = path.resolve();
 //app.use(cors());
-app.use(express.json());
-app.use(cookieParser());
 
 app.use(cors({
   origin:"https://chatty-beta-snowy.vercel.app",  
@@ -25,6 +23,11 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],  
   credentials:true,
 }));
+
+app.use(express.json());
+app.use(cookieParser());
+
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
