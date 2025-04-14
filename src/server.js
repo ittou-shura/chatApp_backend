@@ -20,10 +20,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin:"https://chatty.vercel.app",  
+  origin:"https://chatty-beta-snowy.vercel.app",  
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  
   allowedHeaders: ['Content-Type', 'Authorization'],  
-  credentials:true                                                 
+  credentials:true,
 }));
 
 app.use("/api/auth", authRoutes);
