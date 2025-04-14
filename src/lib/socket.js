@@ -5,14 +5,13 @@ import express from "express";
 const app = express();
 const server = http.createServer(app);
 
-const io = new Server(server, {
-  cors: {
-    origin:"https://chatty-beta-snowy.vercel.app",  
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
-  allowedHeaders: ['Content-Type', 'Authorization'],  
-  credentials:true,
-  },
-});
+// const io = new Server(server, {
+//   cors: {
+//     origin:"https://chatty-beta-snowy.vercel.app",  
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],  
+//   credentials:true,
+//   },
+// });
 
 export function getReceiverSocketId(userId) {
   return userSocketMap[userId];
